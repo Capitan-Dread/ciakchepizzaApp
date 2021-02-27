@@ -1,0 +1,3 @@
+
+
+create table `classiche`(`id` int auto_increment not null, `nome` varchar(500) not null, `descrizione` varchar(500) not null, `prezzo` double(99,9), primary key(`id`)) ENGINE = InnoDB;

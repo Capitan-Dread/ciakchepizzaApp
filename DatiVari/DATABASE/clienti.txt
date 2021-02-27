@@ -1,0 +1,16 @@
+create table `clienti`(`id` int(255) auto_increment not null, `cap` int(5) zerofill not null, `nome` varchar(20) not null, `cognome` varchar(20) not null, `indirizzo` varchar(50) not null, `data` varchar(10) not null, `tel` varchar(20) not null, `email` varchar(100) not null unique, `psw` varchar(600) not null, `score` int(3) null, primary key(`id`)) ENGINE = InnoDB;
+
+ -----------------------------------------------------------------------------
+
+[PROVA]
+
+00189
+Alfredo
+Librandi
+Via dei musumeni
+12/07/1982
++393204032198
+prova@gmail.com
+password
+lbrlfd82e13h509q
+

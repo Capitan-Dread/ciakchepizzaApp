@@ -1,0 +1,16 @@
+create table `titolari`(`id` int(255) auto_increment not null, `cap` int(5) zerofill not null, `nome` varchar(20) not null, `cognome` varchar(20) not null, `indirizzo` varchar(50) not null, `data` varchar(10) not null, `cf` varchar(16) null, `tel` varchar(20) not null, `email` varchar(100) not null unique, `psw` varchar(600) not null, `id_pizzeria` int(255) null, `auth` varchar(255) null, primary key(`id`)) ENGINE = InnoDB;
+
+ -----------------------------------------------------------------------------
+
+[PROVA]
+
+00189
+Alfredo
+Librandi
+Via dei musumeni
+12/07/1982
++393204032198
+prova@gmail.com
+password
+lbrlfd82e13h509q
+
