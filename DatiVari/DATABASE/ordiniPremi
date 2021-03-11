@@ -1,0 +1,3 @@
+
+
+create table `ordiniPremi`(`id` int auto_increment not null, `nome` varchar(500) null, `punti` int(255) null, `idClt` int(255) null, `modRitiro` varchar(500) null, `quantita` int(255) null, `cap` int(5) null, `descrizione` varchar(500) null, primary key(`id`)) ENGINE = InnoDB;
