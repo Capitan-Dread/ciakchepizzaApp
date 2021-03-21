@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Creato il: Mar 10, 2021 alle 05:03
--- Versione del server: 10.3.27-MariaDB-cll-lve
+-- Creato il: Mar 21, 2021 alle 00:53
+-- Versione del server: 10.3.28-MariaDB-cll-lve
 -- Versione PHP: 7.3.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -25,6 +25,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `bianche`
+--
+
+CREATE TABLE `bianche` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(500) NOT NULL,
+  `descrizione` varchar(500) NOT NULL,
+  `prezzo` double(99,9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `classiche`
 --
 
@@ -41,7 +54,24 @@ CREATE TABLE `classiche` (
 
 INSERT INTO `classiche` (`id`, `nome`, `descrizione`, `prezzo`) VALUES
 (1, 'Rossa', 'Pomodoro, Olio e Origano', 3.000000000),
-(2, 'Margherita', 'pommozz', 2.500000000);
+(2, 'Margherita', 'pommozz', 2.500000000),
+(3, 'Marinara', 'Pomodoro, aglio, olio, origano', 3.500000000),
+(4, 'Funghi', 'Pomodoro, funghi, mozzarella', 4.500000000),
+(5, 'Napoli', 'Pomodoro, alici, mozzarella', 4.500000000),
+(6, 'Zucchine', 'Pomodoro, Zucchine', 5.000000000),
+(7, 'Boscaiola', 'Mozzarella, funghi, salsiccia', 5.000000000),
+(8, 'Crostino', 'Mozarella, prosciutto cotto', 5.000000000),
+(9, 'Vegetariana', 'Mozzarella, Zucchine, Peperoni, Melanzane', 5.000000000),
+(10, 'Patate', 'Mozzarella, patate', 5.000000000),
+(11, 'Wurstel', 'Mozzarella, pomodoro, wurstel', 5.000000000),
+(12, 'Zucchine e Pachino', 'Mozzarella, zucchine e pachino', 5.000000000),
+(13, 'Funghi e cotto', 'Mozzarella, cotto e funghi', 5.000000000),
+(14, 'Melanzane e funghi', 'Mozzarella, melanzane e funghi', 5.000000000),
+(15, 'Peperoni', 'Mozzarella, pomodoro e peperoni', 5.000000000),
+(16, 'Patate e mozarella', 'patate, mozzarella', 4.000000000),
+(17, 'Patate e rosmarino', 'patate, olio, sale e rosmarino', 5.000000000),
+(18, 'Olive verdi e salsiccia', 'Mozzarella, salsiccia, olive verdi', 5.000000000),
+(19, 'Patate e salsicce', 'patate e salsiccia', 5.000000000);
 
 -- --------------------------------------------------------
 
@@ -169,6 +199,19 @@ CREATE TABLE `pizzerie` (
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `rosse`
+--
+
+CREATE TABLE `rosse` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(500) NOT NULL,
+  `descrizione` varchar(500) NOT NULL,
+  `prezzo` double(99,9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `titolari`
 --
 
@@ -198,6 +241,12 @@ INSERT INTO `titolari` (`id`, `cap`, `nome`, `cognome`, `indirizzo`, `data`, `cf
 --
 -- Indici per le tabelle scaricate
 --
+
+--
+-- Indici per le tabelle `bianche`
+--
+ALTER TABLE `bianche`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indici per le tabelle `classiche`
@@ -238,6 +287,12 @@ ALTER TABLE `pizzerie`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indici per le tabelle `rosse`
+--
+ALTER TABLE `rosse`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indici per le tabelle `titolari`
 --
 ALTER TABLE `titolari`
@@ -249,16 +304,22 @@ ALTER TABLE `titolari`
 --
 
 --
+-- AUTO_INCREMENT per la tabella `bianche`
+--
+ALTER TABLE `bianche`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT per la tabella `classiche`
 --
 ALTER TABLE `classiche`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT per la tabella `clienti`
 --
 ALTER TABLE `clienti`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99422;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99436;
 
 --
 -- AUTO_INCREMENT per la tabella `creaPizza`
@@ -270,13 +331,19 @@ ALTER TABLE `creaPizza`
 -- AUTO_INCREMENT per la tabella `ordiniPremi`
 --
 ALTER TABLE `ordiniPremi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12151;
 
 --
 -- AUTO_INCREMENT per la tabella `pizzerie`
 --
 ALTER TABLE `pizzerie`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT per la tabella `rosse`
+--
+ALTER TABLE `rosse`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `titolari`
